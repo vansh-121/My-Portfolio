@@ -229,109 +229,113 @@
         <!-- Loader HTML -->
 <!-- Loader HTML -->
  
-<div id="loader">
-  <div class="loader-bar"></div>
-  <p id="loader-thought">You are born to shine</p>
-</div>
+            <div id="loader">
+              <div class="loader-bar"></div>
+              <p id="loader-thought">You are born to shine</p>
+            </div>
 
-<!-- Content of the page -->
-<div id="content" style="display:none;">
-  <!-- Your website content goes here -->
-</div>
+            <!-- Content of the page -->
+            <div id="content" style="display:none;">
+              <!-- Your website content goes here -->
+            </div>
 
 
-<style>
-  /* Loader Styles */
-/* Loader Styles */
-#loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: #f8f9fa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 9999;
-}
+            <style>
+              /* Loader Styles */
+            /* Loader Styles */
+            #loader {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100vw;
+              height: 100vh;
+              background-color: #f8f9fa;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              z-index: 9999;
+            }
 
-.loader-bar {
-  width: 100px;
-  height: 4px;
-  background-color: #0017eb;
-  animation: slide 1.5s ease-in-out infinite;
-}
+            .loader-bar {
+              width: 100px;
+              height: 4px;
+              background-color: #0017eb;
+              animation: slide 1.5s ease-in-out infinite;
+            }
 
-/* Bar sliding animation */
-@keyframes slide {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 100px;
-  }
-  100% {
-    width: 0;
-  }
-}
+            /* Bar sliding animation */
+            @keyframes slide {
+              0% {
+                width: 0;
+              }
+              50% {
+                width: 100px;
+              }
+              100% {
+                width: 0;
+              }
+            }
 
-/* Loader text animation */
-#loader p {
-  margin-top: 10px;
-  font-family: 'Arial', sans-serif;
-  font-size: 20px;
-  color: #333;
-  animation: text-blink 1.5s ease-in-out infinite;
-}
+            /* Loader text animation */
+            #loader p {
+              margin-top: 10px;
+              font-family: 'Arial', sans-serif;
+              font-size: 20px;
+              color: #333;
+              animation: text-blink 1.5s ease-in-out infinite;
+            }
 
-@keyframes text-blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
-}
+            @keyframes text-blink {
+              0%, 100% { opacity: 1; }
+              50% { opacity: 0.5; }
+            }
 
-/* Hide content initially */
-#content {
-  display: none;
-}
+            /* Hide content initially */
+            #content {
+              display: none;
+            }
 
-</style>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  // Array of random thoughts
-  const thoughts = [
-    "You are born to shine.",
-    "Believe in yourself!",
-    "The best is yet to come.",
-    "Success is a journey, not a destination.",
-    "Every day is a fresh start.",
-    "Great things take time.",
-    "Stay positive, work hard.",
-    "You are capable of amazing things.",
-    "Dream big and dare to fail.",
-    "Your potential is limitless."
-  ];
+            </style>
+            <script>
+            document.addEventListener("DOMContentLoaded", function() {
+              // Array of random thoughts
+              const thoughts = [
+                "You are born to shine.",
+                "Believe in yourself!",
+                "The best is yet to come.",
+                "Success is a journey, not a destination.",
+                "Every day is a fresh start.",
+                "Great things take time.",
+                "Stay positive, work hard.",
+                "You are capable of amazing things.",
+                "Dream big and dare to fail.",
+                "Your potential is limitless."
+              ];
 
-  // Function to select a random thought
-  function getRandomThought() {
-    const randomIndex = Math.floor(Math.random() * thoughts.length);
-    return thoughts[randomIndex];
-  }
+              // Function to select a random thought
+              function getRandomThought() {
+                const randomIndex = Math.floor(Math.random() * thoughts.length);
+                return thoughts[randomIndex];
+              }
 
-  // Set the loader text to a random thought
-  document.getElementById("loader-thought").textContent = " " + getRandomThought();
+              // Set the loader text to a random thought
+              document.getElementById("loader-thought").textContent = " " + getRandomThought();
 
-  // Simulate content loading delay for demo (you can remove this in production)
-  setTimeout(function () {
-    // Hide loader
-    document.getElementById("loader").style.display = "none";
-    
-    // Show the content
-    document.getElementById("content").style.display = "block";
-  }, 1500); // 3 seconds for demonstration; remove or adjust this timeout
-});
-</script>
+              // Simulate content loading delay for demo (you can remove this in production)
+              setTimeout(function () {
+                // Hide loader
+                document.getElementById("loader").style.display = "none";
+                
+                // Show the content
+                document.getElementById("content").style.display = "block";
+              }, 1500); // 3 seconds for demonstration; remove or adjust this timeout
+            });
+            </script>
+
+
+
+
 
         <toast5-wrapper class="toast5-wrapper" rootclassname="toast5undefined">
           <!--Toast5 component-->
